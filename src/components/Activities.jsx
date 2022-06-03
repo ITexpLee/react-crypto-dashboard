@@ -3,6 +3,7 @@ import styled from "styled-components";
 import currency1 from "../assets/currency1.png";
 import currency2 from "../assets/currency2.png";
 import currency3 from "../assets/currency3.png";
+import { CardStyles } from "./CardStyles";
 
 export default function Activities() {
   const data = [
@@ -57,9 +58,7 @@ export default function Activities() {
 }
 
 const Section = styled.section`
-  background-color: white;
-  padding: 2rem;
-  border-radius: 1rem;
+  ${CardStyles};
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -76,10 +75,10 @@ const Section = styled.section`
         font-weight: bold;
       }
       .pending {
-        color: #868cff;
+        color: var(--secondary-color);
       }
       .completed {
-        color: #00dea3;
+        color: var(--primary-color);
       }
     }
   }

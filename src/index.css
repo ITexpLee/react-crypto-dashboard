@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap");
 
+:root {
+  --primary-color: #00dea3;
+  --secondary-color: #868cff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,4 +33,32 @@ body::-webkit-scrollbar-thumb {
 
 section {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.j-between {
+  justify-content: space-between;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.b-rad-1 {
+  border-radius: 1rem;
 }

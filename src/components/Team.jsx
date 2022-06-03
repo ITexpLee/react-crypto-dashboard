@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
+import { CardStyles } from "./CardStyles";
 
 export default function Team() {
   const team = [
@@ -17,14 +18,14 @@ export default function Team() {
     },
   ];
   return (
-    <Section>
+    <Section className="flex column gap">
       <div className="title-container">
         <h2>Team</h2>
       </div>
-      <div className="teams">
+      <div className="teams flex column gap">
         {team.map(({ image, number, type }) => {
           return (
-            <div className="team">
+            <div className="team flex a-center b-rad-1">
               <img src={image} alt="team" />
               <div className="info">
                 <h3>{type}</h3>
@@ -39,21 +40,11 @@ export default function Team() {
 }
 
 const Section = styled.section`
-  background-color: white;
+  ${CardStyles}
   padding: 1rem 2rem;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   .teams {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
     .team {
-      display: flex;
-      align-items: center;
       justify-content: flex-start;
-      border-radius: 1rem;
       &:nth-of-type(1) {
         background-color: #773efd28;
       }

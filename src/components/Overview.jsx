@@ -9,6 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { CardStyles } from "./CardStyles";
 
 export default function Overview() {
   const data = [
@@ -56,19 +57,19 @@ export default function Overview() {
     },
   ];
   return (
-    <Section>
-      <div className="title-container">
+    <Section className="flex column">
+      <div className="title-container flex j-between">
         <div className="title">
           <h2>
             Market Overview
             <h6>7.2141,9975.75 (25%)</h6>
           </h2>
         </div>
-        <div className="buttons">
-          <button>All</button>
-          <button>1M</button>
-          <button>6M</button>
-          <button>1Y</button>
+        <div className="buttons flex j-center a-center">
+          <button className="b-rad-1">All</button>
+          <button className="b-rad-1">1M</button>
+          <button className="b-rad-1">6M</button>
+          <button className="b-rad-1">1Y</button>
         </div>
       </div>
       <div className="content">
@@ -89,37 +90,29 @@ export default function Overview() {
 }
 
 const Section = styled.section`
-  background-color: white;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+  ${CardStyles};
+  padding: 0;
   gap: 1rem;
   overflow: hidden;
   .title-container {
-    display: flex;
-    justify-content: space-between;
     padding: 1rem 2rem;
     .title {
       h2 {
         h6 {
-          color: #00dea3;
+          color: var(--primary-color);
         }
       }
     }
     .buttons {
-      display: flex;
       gap: 2rem;
-      justify-content: center;
-      align-items: center;
       button {
         padding: 0.5rem 1rem;
-        border-radius: 1rem;
         border: 0.1rem solid #aeb6cf;
         background-color: white;
         cursor: pointer;
         &:hover {
           color: white;
-          background-color: #00dea3;
+          background-color: var(--primary-color);
           border-color: white;
         }
       }

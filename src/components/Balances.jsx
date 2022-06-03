@@ -2,6 +2,7 @@ import React from "react";
 import { FaPlus } from "react-icons/fa";
 import styled from "styled-components";
 import cards from "../assets/cards.png";
+import { CardStyles } from "./CardStyles";
 export default function Balances() {
   return (
     <Section>
@@ -28,9 +29,8 @@ export default function Balances() {
 }
 
 const Section = styled.section`
-  background-color: white;
+  ${CardStyles}
   padding: 1rem 2rem;
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;

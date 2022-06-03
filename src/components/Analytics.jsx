@@ -45,7 +45,7 @@ export default function Analytics() {
     <Section>
       {cards.map(({ image, type, amount, growth, growthType }) => {
         return (
-          <div className="analytic-card" key={type}>
+          <div className="analytic-card b-rad-1" key={type}>
             <div className="image">
               <img src={image} alt={type} />
             </div>
@@ -88,7 +88,6 @@ const Section = styled.section`
     flex-direction: column;
     background-color: white;
     padding: 1rem 2rem;
-    border-radius: 1rem;
     width: 100%;
     .data {
       display: flex;

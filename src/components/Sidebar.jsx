@@ -58,7 +58,7 @@ export default function Sidebar() {
           })}
         </ul>
       </div>
-      <div className="privacy">
+      <div className="privacy b-rad-1">
         <img src={security} alt="Security" />
         <h3>Keep you safe!</h3>
         <h5>Update your security password, keep your account safe!</h5>
@@ -123,7 +123,6 @@ const Aside = styled.aside`
     align-items: center;
     text-align: center;
     background-color: #00dea3;
-    border-radius: 1rem;
     padding: 1rem;
     gap: 0.6rem;
     h3,
