@@ -42,16 +42,19 @@ export default function Analytics() {
     },
   ];
   return (
-    <Section>
+    <Section className="gap-2">
       {cards.map(({ image, type, amount, growth, growthType }) => {
         return (
-          <div className="analytic-card b-rad-1" key={type}>
+          <div
+            className="analytic-card b-rad-1 card-padding flex column"
+            key={type}
+          >
             <div className="image">
               <img src={image} alt={type} />
             </div>
-            <div className="data">
-              <div className="info">
-                <div className="currency">
+            <div className="data flex j-between a-center">
+              <div className="info flex column">
+                <div className="currency flex gap">
                   <span>{type}</span>
                   <FaExchangeAlt />
                   <span>USD</span>
@@ -80,28 +83,15 @@ export default function Analytics() {
 
 const Section = styled.section`
   width: 100%;
-  gap: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   .analytic-card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 1rem 2rem;
+    background-color: var(--bg-color);
     width: 100%;
     .data {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       margin-top: 1rem;
       .info {
-        display: flex;
-        flex-direction: column;
         gap: 0.3rem;
-        .currency {
-          display: flex;
-          gap: 1rem;
-        }
       }
     }
   }

@@ -28,19 +28,19 @@ export default function Navbar() {
 const Nav = styled.nav`
   .user {
     span {
-      color: #707eae;
+      color: var(--primary-text);
     }
   }
   .search-container {
-    background-color: white;
-    color: #aeb6cf;
+    background-color: var(--bg-color);
+    color: var(--light-text);
     padding: 0 2rem;
     input {
       border: none;
       width: 20rem;
       font-size: 1.1rem;
       &::placeholder {
-        color: #aeb6cf;
+        color: var(--light-text);
         text-transform: capitalize;
       }
       &:focus {
@@ -51,7 +51,7 @@ const Nav = styled.nav`
   .profile {
     .notification {
       padding: 1rem;
-      background-color: white;
+      background-color: var(--bg-color);
       border-radius: 0.5rem;
     }
   }

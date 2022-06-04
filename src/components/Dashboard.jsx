@@ -11,15 +11,15 @@ export default function Dashboard() {
   return (
     <Container>
       <Navbar />
-      <div className="cards">
+      <div className="cards gap-2 flex column">
         <div className="col--one">
           <Analytics />
         </div>
-        <div className="col--two">
+        <div className="col--two gap-2">
           <Overview />
           <Balances />
         </div>
-        <div className="col--three">
+        <div className="col--three gap-2">
           <Activities />
           <Team />
         </div>
@@ -29,19 +29,15 @@ export default function Dashboard() {
 }
 
 const Container = styled.div`
-  background-color: #dcf2f8;
+  background-color: var(--body-bg);
   padding: 2rem;
   margin-left: 15vw;
   .cards {
     margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
     .col--two,
     .col--three {
       display: grid;
       grid-template-columns: 74% 25%;
-      gap: 2rem;
     }
   }
 `;

@@ -18,7 +18,7 @@ export default function Team() {
     },
   ];
   return (
-    <Section className="flex column gap">
+    <Section className="flex column gap card-padding">
       <div className="title-container">
         <h2>Team</h2>
       </div>
@@ -40,16 +40,15 @@ export default function Team() {
 }
 
 const Section = styled.section`
-  ${CardStyles}
-  padding: 1rem 2rem;
+  ${CardStyles};
   .teams {
     .team {
       justify-content: flex-start;
       &:nth-of-type(1) {
-        background-color: #773efd28;
+        background-color: var(--subdue-primary-color);
       }
       &:nth-of-type(2) {
-        background-color: #00dea328;
+        background-color: var(--subdue-secondary-color);
       }
     }
   }

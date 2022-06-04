@@ -37,17 +37,19 @@ export default function Sidebar() {
     },
   ];
   return (
-    <Aside>
-      <div className="brand">
+    <Aside className="flex column j-between">
+      <div className="brand flex a-center j-center gap">
         <img src={logo} alt="logo" />
-        <span>JUST.</span>
+        <span className="font-bold">JUST.</span>
       </div>
-      <div className="links">
-        <ul>
+      <div className="links flex a-center j-center">
+        <ul className="flex column gap">
           {data.map(({ name, icon }, index) => {
             return (
               <li
-                className={`${selected === index ? "selected" : ""}`}
+                className={`${
+                  selected === index ? "selected" : ""
+                } flex gap a-center`}
                 onClick={() => setSelected(index)}
                 key={name + icon}
               >
@@ -58,7 +60,7 @@ export default function Sidebar() {
           })}
         </ul>
       </div>
-      <div className="privacy b-rad-1">
+      <div className="privacy b-rad-1 flex a-center j-center column gap">
         <img src={security} alt="Security" />
         <h3>Keep you safe!</h3>
         <h5>Update your security password, keep your account safe!</h5>
@@ -70,61 +72,39 @@ export default function Sidebar() {
 
 const Aside = styled.aside`
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  /* width: 99%; */
   width: 15vw;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1;
   height: 100vh;
-  background-color: white;
+  background-color: var(--bg-color);
   padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   .brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
     span {
       font-size: 1.4rem;
-      font-weight: bold;
     }
   }
   .links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     ul {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
       li {
-        display: flex;
-        gap: 1rem;
         font-size: 1.2rem;
-        align-items: center;
         cursor: pointer;
         transition: 0.5s ease-in-out;
         &:hover {
-          color: #00dea3;
+          color: var(--primary-color);
         }
       }
       .selected {
-        color: #00dea3;
+        color: var(--primary-color);
       }
     }
   }
   .privacy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #00dea3;
-    padding: 1rem;
     gap: 0.6rem;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 1rem;
     h3,
     h4 {
       color: white;

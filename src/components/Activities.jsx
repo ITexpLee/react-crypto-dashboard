@@ -30,20 +30,20 @@ export default function Activities() {
     },
   ];
   return (
-    <Section>
+    <Section className="flex column gap">
       <div className="title-container">
         <h2>Recent Activities</h2>
       </div>
-      <div className="content">
+      <div className="content flex column gap">
         {data.map(({ image, name, time, amount, status }, index) => {
           return (
-            <div className="activity" key={index}>
+            <div className="activity a-center" key={index}>
               <img src={image} alt="activity" />
-              <p>{name}</p>
-              <p>{time}</p>
-              <p>{amount}</p>
+              <p className="font-bold">{name}</p>
+              <p className="font-bold">{time}</p>
+              <p className="font-bold">{amount}</p>
               <p
-                className={`${
+                className={`font-bold ${
                   status === "Completed" ? "completed" : "pending"
                 }`}
               >
@@ -59,20 +59,12 @@ export default function Activities() {
 
 const Section = styled.section`
   ${CardStyles};
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   .content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
     .activity {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      align-items: center;
       p {
-        color: #707eae;
-        font-weight: bold;
+        color: var(--primary-text);
       }
       .pending {
         color: var(--secondary-color);

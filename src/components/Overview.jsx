@@ -57,15 +57,15 @@ export default function Overview() {
     },
   ];
   return (
-    <Section className="flex column">
-      <div className="title-container flex j-between">
+    <Section className="flex column j-between gap">
+      <div className="title-container flex j-between card-padding">
         <div className="title">
           <h2>
             Market Overview
             <h6>7.2141,9975.75 (25%)</h6>
           </h2>
         </div>
-        <div className="buttons flex j-center a-center">
+        <div className="buttons flex j-center a-center gap-2">
           <button className="b-rad-1">All</button>
           <button className="b-rad-1">1M</button>
           <button className="b-rad-1">6M</button>
@@ -92,10 +92,8 @@ export default function Overview() {
 const Section = styled.section`
   ${CardStyles};
   padding: 0;
-  gap: 1rem;
   overflow: hidden;
   .title-container {
-    padding: 1rem 2rem;
     .title {
       h2 {
         h6 {
@@ -104,11 +102,10 @@ const Section = styled.section`
       }
     }
     .buttons {
-      gap: 2rem;
       button {
         padding: 0.5rem 1rem;
         border: 0.1rem solid #aeb6cf;
-        background-color: white;
+        background-color: var(--bg-color);
         cursor: pointer;
         &:hover {
           color: white;

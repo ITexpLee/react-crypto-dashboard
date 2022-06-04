@@ -5,8 +5,8 @@ import cards from "../assets/cards.png";
 import { CardStyles } from "./CardStyles";
 export default function Balances() {
   return (
-    <Section>
-      <div className="title-container">
+    <Section className="flex column gap card-padding">
+      <div className="title-container flex a-center j-between">
         <h2>Balances</h2>
         <div className="plus">
           <FaPlus />
@@ -20,7 +20,7 @@ export default function Balances() {
           </div>
           <h1>9784.79</h1>
         </div>
-        <div className="image">
+        <div className="image flex j-center a-center">
           <img src={cards} alt="cards" />
         </div>
       </div>
@@ -30,22 +30,8 @@ export default function Balances() {
 
 const Section = styled.section`
   ${CardStyles}
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  .title-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .plus {
-    }
-  }
   .content {
     .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       img {
         height: 12rem;
       }
